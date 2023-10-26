@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import WithSubnavigation from '@/components/navbar'
 import CallToActionWithAnnotation from '@/components/hero'
-import SimpleThreeColumns from '@/components/feature'
 import WithSpeechBubbles from '@/components/review'
 import LargeWithLogoLeft from '@/components/footer'
 
@@ -21,7 +20,6 @@ export default function Home() {
       <WithSubnavigation/>
       <main>
         <CallToActionWithAnnotation/>
-        <SimpleThreeColumns/>
         <WithSpeechBubbles/>
         <LargeWithLogoLeft/>
       </main>
