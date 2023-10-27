@@ -12,8 +12,16 @@ import {
   useColorModeValue,
   createIcon,
 } from '@chakra-ui/react'
+import { useState } from 'react';
 
 export default function CallToActionWithAnnotation() {
+
+    const [color, setColor] = useState(false);
+
+    function ChangeColor() {
+        setColor(color == false ? true : false)
+    }
+
   return (
     <>
       <Container maxW={'3xl'}>
@@ -43,12 +51,11 @@ export default function CallToActionWithAnnotation() {
             alignSelf={'center'}
             position={'relative'}>
             <Button
-              colorScheme={'green'}
-              bg={'green.400'}
+              bg={color == false ?'red.400':'green.400'}
               rounded={'full'}
               px={6}
-              _hover={{
-                bg: 'green.500',
+              onClick={() => {
+                ChangeColor()
               }}>
               Get Started
             </Button>
